@@ -1,0 +1,150 @@
+body {
+  font-family: Inter, Arial, sans-serif;
+  margin: 0;
+  background: #0d1117;
+  color: #e6e9ef;
+}
+
+.app {
+  max-width: 1250px;
+  margin: 20px auto;
+  padding: 6px 14px;
+}
+
+.topbar h1 {
+  margin: 0 0 16px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  gap: 18px;
+}
+
+.left {
+  flex: 3;
+}
+
+.panel {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transition: 0.25s ease;
+}
+
+.panel:hover {
+  transform: translateY(-1px);
+}
+
+label {
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+  opacity: 0.9;
+}
+
+input, select, textarea {
+  width: 100%;
+  margin-top: 6px;
+  background: #161b22;
+  border: 1px solid #2d333b;
+  color: #f0f3f7;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+button.primary {
+  background: #1570ef;
+  color: #fff;
+}
+
+button.primary:hover {
+  background: #1b84ff;
+}
+
+button.danger {
+  background: #a32323;
+  color: #fff;
+}
+
+button.danger:hover {
+  background: #c42f2f;
+}
+
+.chatbox {
+  height: 58vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.message {
+  margin: 12px 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  max-width: 75%;
+  line-height: 1.4;
+  backdrop-filter: blur(10px);
+}
+
+.message.user {
+  align-self: flex-end;
+  background: rgba(21,112,239,0.25);
+  border: 1px solid rgba(21,112,239,0.35);
+}
+
+.message.assistant {
+  align-self: flex-start;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.right {
+  flex: 1;
+  height: 72vh;
+  overflow-y: auto;
+}
+
+#retrieved div {
+  margin-bottom: 14px;
+  padding: 10px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+}
+
+footer {
+  margin-top: 14px;
+  text-align: center;
+  opacity: 0.7;
+}

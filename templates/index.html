@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IT Incident Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>IT Incident Assistant</h1>
+    </header>
+
+    <main>
+      <section class="left">
+
+        <!-- Ingest Section -->
+        <div class="panel uploader">
+          <h3>Data Ingestion</h3>
+          <form id="upload-form" enctype="multipart/form-data">
+            <label>Upload PDFs</label>
+            <input type="file" id="pdfs" name="pdfs" accept="application/pdf" multiple>
+
+            <label>Incident History (Excel)</label>
+            <input type="file" id="excel" name="excel" accept=".xls,.xlsx">
+
+            <label>Local PDF Folder (server path)</label>
+            <input type="text" id="pdffolder" name="pdffolder" placeholder="C:\\path\\to\\pdfs">
+
+            <div class="btn-row">
+              <button type="button" id="ingest-btn" class="primary">Ingest & Build</button>
+              <button type="button" id="clear-btn" class="danger">Clear Index</button>
+            </div>
+          </form>
+          <div id="ingest-status" class="status"></div>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="panel chatbox">
+          <div id="messages" class="messages"></div>
+
+          <div class="composer">
+            <textarea id="user-input" placeholder="Describe your incident..." rows="3"></textarea>
+            <div class="controls">
+              <select id="model-select"></select>
+              <button id="send-btn" class="primary">Analyze</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel right">
+        <h3>Context Retrieved</h3>
+        <div id="retrieved"></div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>Local prototype — data processed on this machine.</small>
+    </footer>
+  </div>
+
+  <script>window.DEFAULT_MODEL = 'gemini-2.5-pro';</script>
+  <script src="/static/script.js"></script>
+</body>
+</html>
