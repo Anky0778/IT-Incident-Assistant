@@ -1,7 +1,8 @@
 streamlit
-google-generativeai
+pdfplumber
+pandas
 faiss-cpu
 sentence-transformers
+google-generativeai
 numpy
-pandas
 scikit-learn
