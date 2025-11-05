@@ -1,8 +1,9 @@
 streamlit
-pdfplumber
 pandas
-faiss-cpu
+pdfplumber
 sentence-transformers
+faiss-cpu
+scikit-learn
 google-generativeai
 numpy
-scikit-learn
+openpyxl
